@@ -1,6 +1,86 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    color: white;
+    background-color: #1992d4;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title,
+.nav > *,
+.settings > *  {
+    display: grid;
+    grid-template: 1fr 1fr / 3em 1fr;
+    column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+.title h1,
+.nav li,
+.settings li {
+    justify-self: start;
+}
+
+
+.sidebar li {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+svg {
+    height: 1.5em;
+}
+
+.title svg {
+    height: 3em;
+}
+
+.nav > div,
+.settings > div {
+
+}
+
+.nav svg,
+.settings svg {
+
+}
+
+.header {
+    
+}
+
+.content {
+
 }
