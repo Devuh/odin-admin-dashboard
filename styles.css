@@ -104,7 +104,7 @@ input#search {
     width: 40vw;
 }
 
-.user {
+.header .user {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -148,8 +148,8 @@ input#search {
 .content {
     background-color: var(--light-gray);
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .projects {
@@ -173,8 +173,83 @@ input#search {
     padding: 20px;
     padding-top: 30px;
     box-shadow: 2px 2px 8px rgb(202, 202, 202);
+    position: relative;
 }
 
 .projects p {
+    color: var(--accent-text-color);
+}
+
+.icons {
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.announcements {
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.announcements .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgb(202, 202, 202);
+    margin-right: 20px;
+    padding: 30px;
+}
+
+.announcements hr {
+    border: 0px;
+    height: 1px;
+    background-color: #d2d2d2;
+}
+
+.announcements h3:not(:first-child) {
+    margin-top: 20px;
+}
+
+.announcements p {
+    color: var(--accent-text-color);
+    font-size: 12px;
+}
+
+.announcements p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.trending {
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    height: 10vh;
+}
+
+.trending .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgb(202, 202, 202);
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.trending .user {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.trending .card > div > p:first-of-type {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.trending .card > div > p:last-of-type {
     color: var(--accent-text-color);
 }
