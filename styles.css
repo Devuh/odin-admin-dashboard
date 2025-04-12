@@ -102,6 +102,9 @@ input#search {
     border-radius: 30px;
     height: 2.5em;
     width: 40vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
 }
 
 .header .user {
