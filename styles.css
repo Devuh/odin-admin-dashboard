@@ -6,6 +6,11 @@
     font-style: normal;
 }
 
+:root {
+    --global-padding: 15px;
+    --light-gray: #e2e8f0;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -25,7 +30,7 @@ body {
     grid-row: 1 / -1;
     color: white;
     background-color: #1992d4;
-    padding: 15px;
+    padding: var(--global-padding);
     display: flex;
     flex-direction: column;
 }
@@ -67,20 +72,44 @@ svg {
     height: 3em;
 }
 
-.nav > div,
-.settings > div {
-
-}
-
-.nav svg,
-.settings svg {
-
-}
-
 .header {
-    
+    padding: calc(var(--global-padding) + 10px);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    flex: 1;
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+
+input#search {
+    background-color: var(--light-gray);
+    border: 0px;
+    border-radius: 30px;
+    height: 2.5em;
+    width: 40vw;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user img {
+    height: 3em;
+    border-radius: 50px;
 }
 
 .content {
-
+    background-color: var(--light-gray);
 }
